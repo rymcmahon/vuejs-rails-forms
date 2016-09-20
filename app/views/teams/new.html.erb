@@ -1,5 +1,11 @@
 <div id="new-team-form">
-  <p>
-    {{ message }}
-  </p>
+  <label for="name">Team Name: </label><input id="name" v-model="name">
+  <button v-on:click="saveTeam(name)">Save Team</button>
+  <div v-for="player in players">
+    <label for="name">Player Name: </label>
+    <input id="name" v-model="player.name">
+    <label for="position">Player Position: </label>
+    <input id="position" v-model="player.position">
+  </div>
+  <button v-on:click="addPlayer">Add Player</button>
 </div>
