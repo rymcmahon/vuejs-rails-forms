@@ -1,4 +1,9 @@
 <div id="new-team-form">
+  <ul>
+    <li v-for="team in teams">
+      {{ team.name }}
+    </li>
+  </ul>
   <label for="name">Team Name: </label><input id="name" v-model="name">
   <button v-on:click="saveTeam(name)">Save Team</button>
   <div v-for="player in players">

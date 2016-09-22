@@ -1,26 +1,36 @@
-new Vue({
-  el: '#new-team-form',
-  data: {
-    name: "",
-    team: [],
-    players: []
-  },
-  methods: {
-    saveTeam: function(name) {
-      var params = {
-        name: name,
-        players: JSON.stringify(this.players) // converts params to array of arrays
-      };
-      $.post('/api/v1/teams.json', params).done(function(result) {
-        console.log(params);
-        this.name = '';
-      }.bind(this));
+$(document).on('ready page:change', function() {
+  new Vue({
+    el: '#new-team-form',
+    data: {
+      name: "",
+      teams: [],
+      players: []
     },
-    addPlayer: function() {
-      this.players.push({
-        name: '',
-        position: '',
-      })
+    ready: function() {
+      $.get('/api/v1/teams.json', function(result) {
+        this.teams = result.map(function(team) {
+        return team;
+    });
+  }.bind(this));
+},
+    methods: {
+      saveTeam: function(name) {
+        var params = {
+          name: name,
+          players: JSON.stringify(this.players) // converts params to array of arrays
+        };
+        $.post('/api/v1/teams.json', params).done(function(result) {
+          console.log(params);
+          this.name = '';
+        }.bind(this));
+      },
+      addPlayer: function() {
+        this.players.push({
+          name: '',
+          position: '',
+        })
+      },
+
     }
-  }
+  })
 })
