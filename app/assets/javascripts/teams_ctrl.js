@@ -9,10 +9,10 @@ $(document).on('ready page:change', function() {
     ready: function() {
       $.get('/api/v1/teams.json', function(result) {
         this.teams = result.map(function(team) {
-        return team;
-    });
-  }.bind(this));
-},
+          return team;
+        });
+      }.bind(this));
+    },
     methods: {
       saveTeam: function(name) {
         var params = {
@@ -20,8 +20,9 @@ $(document).on('ready page:change', function() {
           players: JSON.stringify(this.players) // converts params to array of arrays
         };
         $.post('/api/v1/teams.json', params).done(function(result) {
-          console.log(params);
+          this.teams.push({ name: name });
           this.name = '';
+          console.log(params);
         }.bind(this));
       },
       addPlayer: function() {
@@ -30,7 +31,6 @@ $(document).on('ready page:change', function() {
           position: '',
         })
       },
-
     }
   })
 })
