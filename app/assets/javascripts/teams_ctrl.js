@@ -21,7 +21,7 @@ $(document).on('ready page:change', function() {
         };
         $.post('/api/v1/teams.json', params).done(function(result) {
           console.log(params);
-          window.location = "/teams/" + team.id;
+          window.location = "/teams/" + result.id;
         }.bind(this));
       },
       addPlayer: function() {

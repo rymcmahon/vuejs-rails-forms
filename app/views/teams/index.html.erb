@@ -1,6 +1,6 @@
 <div id="new-team-form">
-  <label for="name">Team Name: </label><input id="name" v-model="name">
-  <button v-on:click="saveTeam(name)">Save Team</button>
+  <label for="name">Team Name: </label>
+  <input id="name" v-model="name">
   <div v-for="player in players">
     <label for="name">Player Name: </label>
     <input id="name" v-model="player.name">
@@ -8,4 +8,5 @@
     <input id="position" v-model="player.position">
   </div>
   <button v-on:click="addPlayer">Add Player</button>
+  <button v-on:click="saveTeam(name)">Save Team</button>
 </div>
