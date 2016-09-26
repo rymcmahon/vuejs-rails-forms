@@ -20,9 +20,8 @@ $(document).on('ready page:change', function() {
           players: JSON.stringify(this.players) // converts params to array of arrays
         };
         $.post('/api/v1/teams.json', params).done(function(result) {
-          this.teams.push({ name: name });
-          this.name = '';
           console.log(params);
+          window.location = "/teams/" + team.id;
         }.bind(this));
       },
       addPlayer: function() {

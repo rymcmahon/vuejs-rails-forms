@@ -16,4 +16,9 @@ class Api::V1::TeamsController < ApplicationController
       )
     end
   end
+
+  def show
+    @team = Team.find(params[:id])
+    render 'show.json.jbuilder'
+  end
 end
