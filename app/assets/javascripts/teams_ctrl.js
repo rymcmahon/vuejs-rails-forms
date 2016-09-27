@@ -20,16 +20,16 @@ $(document).on('ready page:change', function() {
           players: JSON.stringify(this.players) // converts params to array of arrays
         };
         $.post('/api/v1/teams.json', params).done(function(result) {
-          console.log(params);
+          console.log(result);
           window.location = "/teams/" + result.id;
         }.bind(this));
       },
       addPlayer: function() {
         this.players.push({
           name: '',
-          position: '',
+          position: ''
         })
-      },
+      }
     }
   })
 })
