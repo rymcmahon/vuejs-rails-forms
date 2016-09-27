@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/' => 'teams#index'
+  get '/' => 'teams#new'
   get '/teams' => 'teams#index'
   get '/teams/:id' => 'teams#show'
   namespace :api do
