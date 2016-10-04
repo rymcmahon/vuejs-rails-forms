@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ .container-margin {
+   margin-top: 40px;
+ }
+
+ .validation-error {
+   color: red;
+   text-transform: uppercase;
+ }
+
+ @media (min-width: 768px) {
+   #new-team-form {
+     width: 500px;
+     margin: 0 auto;
+   }
+ }
