@@ -7,13 +7,6 @@ $(document).on('ready page:change', function() {
       players: [],
       errors: []
     },
-    // ready: function() {
-    //   $.get('/api/v1/teams.json', function(result) {
-    //     this.teams = result.map(function(team) {
-    //       return team;
-    //     });
-    //   }.bind(this));
-    // },
     methods: {
       saveTeam: function(name) {
         var params = {
