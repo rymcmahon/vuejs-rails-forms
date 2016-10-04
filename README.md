@@ -1,24 +1,13 @@
-# README
+## Using Vue.js as an Alternative to Rails Nested Forms
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the code I used for a blog post that explored how to use Vue.js instead of Rails nested forms when you want to hit multiple models within the same form.
 
-Things you may want to cover:
+The blog post can be found [here:](http://www.rymcmahon.com/articles/9)
 
-* Ruby version
+I deployed the code to Heroku, so you can try it out [here:](https://vuejs-rails-forms.herokuapp.com/)
 
-* System dependencies
+### Details
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Vue.js v1.0.26
+* Rails 5.0.0.1
+* PostgreSQL
