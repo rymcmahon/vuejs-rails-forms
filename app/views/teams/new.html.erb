@@ -1,6 +1,7 @@
 <div id="new-team-form">
   <label for="name">Team Name: </label>
   <input id="name" v-model="name">
+    {{ errors }}
   <div v-for="player in players">
     <label for="name">Player Name: </label>
     <input id="name" v-model="player.name">

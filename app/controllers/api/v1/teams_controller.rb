@@ -1,8 +1,8 @@
 class Api::V1::TeamsController < ApplicationController
-  def index
-    @teams = Team.all
-    render 'index.json.jbuilder'
-  end
+  # def index
+  #   @teams = Team.all
+  #   render 'index.json.jbuilder'
+  # end
 
   def create
     @team = Team.new(
@@ -16,14 +16,14 @@ class Api::V1::TeamsController < ApplicationController
       )
     end
     if @team.save
-     render 'show.json.jbuilder'
-   else
-     render json: { errors: @team.errors.full_messages }, status: 422
-   end
+      render 'show.json.jbuilder'
+    else
+      render json: { errors: @team.errors.full_messages }, status: 422
+    end
   end
 
   def show
     @team = Team.find(params[:id])
-    render 'show.json.jbuilder'
+    # render 'show.json.jbuilder'
   end
 end
