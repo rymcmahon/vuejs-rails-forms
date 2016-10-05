@@ -1,18 +1,25 @@
 <div class="container container-margin">
   <div id="new-team-form">
     <div class="form-group">
-      <label for="name">Team Name: </label>
+      <label for="name" class="form-label">Team Name</label>
       <input id="name" v-model="name" class="form-control">
       <p class="validation-error">{{ errors }}</p>
-
     </div>
-    <div v-for="player in players" class="form-group">
-      <label for="name">Player Name: </label>
-      <input id="name" v-model="player.name" class="form-control">
-      <label for="position">Player Position: </label>
-      <input id="position" v-model="player.position" class="form-control">
+    <div v-for="player in players">
+      <div class="form-group player-form">
+        <label for="name" class="form-label">Player Name</label>
+        <input id="name" v-model="player.name" class="form-control">
+      </div>
+      <div class="form-group player-form">
+        <label for="position" class="form-label">Player Position</label>
+        <input id="position" v-model="player.position" class="form-control">
+      </div>
     </div>
-    <button v-on:click="addPlayer" class="btn btn-info">Add Player</button>
-    <button v-on:click="saveTeam(name)" class="btn btn-success">Save Team</button>
+    <div class="form-group add-player-btn">
+      <button v-on:click="addPlayer" class="btn btn-info btn-sm">Add Player</button>
+    </div>
+    <div class="form-group">
+      <button v-on:click="saveTeam(name)" class="btn btn-success">Save Team</button>
+    </div>
   </div>
 </div>

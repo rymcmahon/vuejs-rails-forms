@@ -1,4 +1,7 @@
-<h3><%= @team.name %></h3>
-<% @team.players.each do |player| %>
-  <p><strong>Name: </strong><%= player.name %> <strong>Position: </strong><%= player.position %></p>
-<% end %>
+<div class="container">
+  <h3><%= @team.name %></h3>
+  <% @team.players.each do |player| %>
+  <p><strong class="player-show">NAME: </strong><%= player.name %> <strong class="player-show">POSITION: </strong><%= player.position %></p>
+  <% end %>
+</div>
+

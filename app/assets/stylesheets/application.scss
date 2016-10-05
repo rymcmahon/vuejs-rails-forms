@@ -26,6 +26,22 @@
    text-transform: uppercase;
  }
 
+ .player-form {
+   width: 90%;
+   margin-left: 5%;
+ }
+
+.form-label {
+  text-transform: uppercase;
+  color: #969696;
+}
+
+.player-show {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #969696;
+}
+
  @media (min-width: 768px) {
    #new-team-form {
      width: 500px;

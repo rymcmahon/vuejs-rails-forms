@@ -10,4 +10,5 @@ I deployed the code to Heroku, so you can try it out [here.](https://vuejs-rails
 
 * Vue.js v1.0.26
 * Rails 5.0.0.1
+* Bootstrap-sass 
 * PostgreSQL
