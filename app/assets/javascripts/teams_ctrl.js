@@ -1,4 +1,4 @@
-$(document).on('ready page:change', function() {
+$(document).on('ready', function() {
   new Vue({
     el: '#new-team-form',
     data: {
